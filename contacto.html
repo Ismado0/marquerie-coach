@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | Marquerie Coach</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="tarifas.html">Tarifas</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h2 class="titulo-seccion">¿Hablamos?</h2>
+        <p>Rellena el formulario y diseñaremos tu plan de acción personalizado.</p>
+        
+        <form class="formulario-pro" action="https://formspree.io/f/mkokwyqp" method="POST">
+            <label>Nombre Completo</label>
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <label>Email de contacto</label>
+            <input type="email" name="_replyto" placeholder="tu@email.com" required>
+
+            <label>¿Cuál es tu objetivo principal?</label>
+            <select name="objetivo" id="selector-objetivo" onchange="comprobarOtro(this)">
+                <option value="Ganar Masa Muscular">Ganar Masa Muscular</option>
+                <option value="Pérdida de Grasa">Pérdida de Grasa / Definición</option>
+                <option value="Mejora de Salud">Mejorar Salud General</option>
+                <option value="Rendimiento Deportivo">Aumentar Rendimiento Deportivo</option>
+                <option value="Oposiciones">Preparación Oposiciones</option>
+                <option value="Powerlifting">Powerlifting / Fuerza Máxima</option>
+                <option value="otro">Otro (Especificar...)</option>
+            </select>
+
+            <div id="campo-otro" style="display: none;">
+                <label>Especifica tu objetivo:</label>
+                <input type="text" name="otro_objetivo_detalle" placeholder="Escribe aquí tu meta...">
+            </div>
+
+            <label>Mensaje adicional</label>
+            <textarea name="mensaje" rows="6" placeholder="Cuéntame tu situación..."></textarea>
+
+            <button type="submit" class="boton-enviar">Enviar Solicitud</button>
+        </form>
+    </main>
+
+    <footer><p>&copy; 2026 Isaac Marquerie Domingo</p></footer>
+
+    <script>
+        function comprobarOtro(select) {
+            const divOtro = document.getElementById('campo-otro');
+            divOtro.style.display = (select.value === 'otro') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* CONFIGURACIÓN GENERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+
+body { 
+    background-color: #0f0f0f; 
+    color: #ffffff; 
+    line-height: 1.8;
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../img/fondo-gym.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* HEADER */
+header { 
+    background-color: rgba(20, 20, 20, 0.95); 
+    padding: 20px 10%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid #b38e44;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header .logo img { height: 90px; width: auto; }
+nav ul li { display: inline; margin-left: 35px; }
+nav ul li a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+}
+nav ul li a:hover, nav ul li a.active { color: #b38e44; }
+
+/* HERO SECCIÓN */
+#hero { 
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('../img/entrenador.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #333;
+}
+.contenido-hero { max-width: 600px; }
+.contenido-hero h1 { font-size: 4rem; color: #b38e44; line-height: 1.1; margin-bottom: 10px; }
+.subtitulo { font-size: 1.5rem; color: #ccc; margin-bottom: 25px; font-weight: 300; }
+
+/* CONTENEDORES */
+.contenedor { padding: 80px 10%; text-align: center; }
+.titulo-seccion { font-size: 2.5rem; color: #b38e44; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+
+/* GRID DE CARDS */
+.grid-basico { display: flex; justify-content: space-between; gap: 30px; margin-top: 50px; }
+.card { 
+    background: rgba(30, 30, 30, 0.8); 
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 1px solid #333;
+    flex: 1;
+    transition: 0.3s;
+}
+.card:hover { border-color: #b38e44; transform: translateY(-10px); }
+.card h3 { color: #b38e44; margin-bottom: 15px; font-size: 1.6rem; }
+
+/* TABLAS */
+.tabla-pro { width: 100%; border-collapse: collapse; margin-top: 50px; background: rgba(20, 20, 20, 0.9); }
+.tabla-pro th, .tabla-pro td { padding: 25px; border: 1px solid #333; text-align: center; }
+.tabla-pro th { background-color: #b38e44; color: #000; font-weight: 900; text-transform: uppercase; }
+.tabla-pro tr:hover { background-color: rgba(179, 142, 68, 0.1); }
+
+/* FORMULARIO */
+.formulario-pro { 
+    max-width: 650px; margin: 50px auto; text-align: left; 
+    background: rgba(20, 20, 20, 0.9); padding: 50px; border-radius: 20px; border: 1px solid #333; 
+}
+.formulario-pro label { color: #b38e44; font-weight: bold; margin-bottom: 8px; display: block; }
+input, select, textarea { 
+    width: 100%; padding: 15px; margin-bottom: 30px; 
+    background: #000; border: 1px solid #444; color: #fff; border-radius: 5px; 
+}
+#campo-otro { animation: aparecer 0.4s ease; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* BOTONES */
+.boton, .boton-enviar { 
+    background-color: #b38e44; color: #000; padding: 20px 40px; 
+    text-decoration: none; font-weight: bold; text-transform: uppercase; 
+    border: none; cursor: pointer; transition: 0.3s; display: inline-block;
+}
+.boton:hover, .boton-enviar:hover { background-color: #fff; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+
+/* FOOTER */
+footer { padding: 60px; text-align: center; background: #050505; color: #555; border-top: 1px solid #222; }
